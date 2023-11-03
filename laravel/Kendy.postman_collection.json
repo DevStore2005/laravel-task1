@@ -1,0 +1,373 @@
+{
+	"info": {
+		"_postman_id": "80400e22-bfb6-49e9-8189-a6bc3ad80e3a",
+		"name": "Kendy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29812210"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"test@email.it\",\r\n    \"password\" : \"12341234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"test\",\r\n    \"email\" : \"test@email.it\",\r\n    \"password\" : \"12341234\",\r\n    \"c_password\" : \"12341234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.kendydrink.com/register",
+					"protocol": "https",
+					"host": [
+						"api",
+						"kendydrink",
+						"com"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvbG9naW4iLCJpYXQiOjE2OTU2NzUzODQsImV4cCI6MTY5NTY3ODk4NCwibmJmIjoxNjk1Njc1Mzg0LCJqdGkiOiJQQmx0QklaWkFZRlNzZGhWIiwic3ViIjoiOCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.BjotHaCpSq-FXRHTrxHUjUjWT4t5VRSSNUrDI5qTxxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cart\": [{\r\n            \"id\": 10,\r\n            \"name\": \"Kendy Mela e Pera\",\r\n            \"price\": \"13.20\",\r\n            \"description\": \"Risveglia i tuoi sensi con \\\"Kendy\\\", l'aromatizzatore d'acqua senza zucchero che ti condurrà in un paradiso di sapore al gusto Mela e Pera. Con zero calorie e un connubio fruttato unico, \\\"Kendy\\\" è l'al\",\r\n            \"short_description\": \"Scopri il paradiso del gusto con \\\"Kendy\\\", l'aromatizzatore d'acqua senza zucchero che ti delizierà con il suo irresistibile gusto di Mela e Pera. Un'esplosione di freschezza fruttata in ogni sorso, pr\",\r\n            \"category_id\": 2,\r\n            \"sales\": 0,\r\n            \"last_modified\": \"1688911598\",\r\n            \"stripe_live_id\": \"\",\r\n            \"stripe_test_id\": \"price_1NSIk8GfXypnSGPSONUBHOnv\",\r\n            \"quantity\": 4\r\n        }\r\n    ],\r\n\t\"billing\": [{\r\n            \"name\": \"Marco\",\"surname\": \"Travaglio\",\r\n            \"email\": \"sonotrans@email.it\",\"phoneNumber\": \"131213211\",\r\n            \"city\": \"Malpensa\",\r\n            \"country\": \"IT\",\r\n            \"shippingAddress\": \"viale 1\",\r\n            \"zipCode\": \"13122\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/checkout",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "otp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvbG9naW4iLCJpYXQiOjE2OTU2NzUzODQsImV4cCI6MTY5NTY3ODk4NCwibmJmIjoxNjk1Njc1Mzg0LCJqdGkiOiJQQmx0QklaWkFZRlNzZGhWIiwic3ViIjoiOCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.BjotHaCpSq-FXRHTrxHUjUjWT4t5VRSSNUrDI5qTxxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"manghina.dario@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/otp",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "otp-confirm",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvbG9naW4iLCJpYXQiOjE2OTU2NzUzODQsImV4cCI6MTY5NTY3ODk4NCwibmJmIjoxNjk1Njc1Mzg0LCJqdGkiOiJQQmx0QklaWkFZRlNzZGhWIiwic3ViIjoiOCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.BjotHaCpSq-FXRHTrxHUjUjWT4t5VRSSNUrDI5qTxxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"manghina.dario@gmail.com\",\r\n    \"opt\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/otp-confirm",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"otp-confirm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registerEmail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvbG9naW4iLCJpYXQiOjE2OTU2NzUzODQsImV4cCI6MTY5NTY3ODk4NCwibmJmIjoxNjk1Njc1Mzg0LCJqdGkiOiJQQmx0QklaWkFZRlNzZGhWIiwic3ViIjoiOCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.BjotHaCpSq-FXRHTrxHUjUjWT4t5VRSSNUrDI5qTxxU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"manghina.dario@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/registerEmail",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"registerEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvbG9naW4iLCJpYXQiOjE2OTgwMDkxMzAsImV4cCI6MTY5ODAxMjczMCwibmJmIjoxNjk4MDA5MTMwLCJqdGkiOiJOSFZ6UWdpdjZMRVlpcVB5Iiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.C-antcfYd1KDoYmyo04j2EQkygYln3ymZokdN4x4l0U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cart\": [\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"Kendy Limone\",\r\n            \"price\": \"13.20\",\r\n            \"description\": \"Scopri \\\"Kendy\\\", l'aromatizzatore d'acqua senza zucchero che ti farà sperimentare l'esplosione di freschezza del gusto limone come mai prima d'ora! Con zero calorie e un sapore che trasuda vitalità, \\\"K\",\r\n            \"short_description\": \"Sperimenta la freschezza vivace del limone con \\\"Kendy\\\", l'aromatizzatore d'acqua senza zucchero. Questo concentrato trasforma la tua acqua in una bevanda rinfrescante e vivace, senza calorie indesider\",\r\n            \"category_id\": 2,\r\n            \"sales\": 0,\r\n            \"last_modified\": \"1688911598\",\r\n            \"stripe_live_id\": \"\",\r\n            \"stripe_test_id\": \"price_1NSIk3GfXypnSGPSZ2whzXx9\",\r\n            \"quantity\": 1\r\n        }\r\n    ],\r\n    \"billing\": [\r\n        {\r\n            \"name\": 1,\r\n            \"surname\": 1,\r\n            \"email\": \"e@e.it\",\r\n            \"phoneNumber\": 1,\r\n            \"city\": \"1\",\r\n            \"country\": \"1\",\r\n            \"shippingAddress\": 1,\r\n            \"zipCode\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvbG9naW4iLCJpYXQiOjE2OTgwMDkxMzAsImV4cCI6MTY5ODAxMjczMCwibmJmIjoxNjk4MDA5MTMwLCJqdGkiOiJOSFZ6UWdpdjZMRVlpcVB5Iiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.C-antcfYd1KDoYmyo04j2EQkygYln3ymZokdN4x4l0U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "statusChange",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvbG9naW4iLCJpYXQiOjE2OTgwMDkxMzAsImV4cCI6MTY5ODAxMjczMCwibmJmIjoxNjk4MDA5MTMwLCJqdGkiOiJOSFZ6UWdpdjZMRVlpcVB5Iiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.C-antcfYd1KDoYmyo04j2EQkygYln3ymZokdN4x4l0U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":33,\"email\":\"manghina.dario@gmail.com\",\"status\":\"COMPLETE\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/statusChange",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"statusChange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "discount",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvbG9naW4iLCJpYXQiOjE2OTgwMDQyODYsImV4cCI6MTY5ODAwNzg4NiwibmJmIjoxNjk4MDA0Mjg2LCJqdGkiOiJ6THdjWmF2NjdGQTc0ZnJSIiwic3ViIjoiMTEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.MkpKR66Bi0e74cYkO4oSDtb1MoZwLU1S4nMSKktYsK4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"promo_1O48IdGfXypnSGPSGjl62vlK\",\r\n  \"object\": \"promotion_code\",\r\n  \"active\": false,\r\n  \"code\": \"FALL20\",\r\n  \"coupon\": \"Z4OV52SU\",\r\n  \"created\": 1698006663,\r\n  \"customer\": null,\r\n  \"expires_at\": null,\r\n  \"livemode\": false,\r\n  \"max_redemptions\": null,\r\n  \"metadata\": {},\r\n  \"restrictions\": {\r\n    \"first_time_transaction\": false,\r\n    \"minimum_amount\": null,\r\n    \"minimum_amount_currency\": null\r\n  },\r\n  \"times_redeemed\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.stripe.com/v1/promotion_codes",
+					"protocol": "https",
+					"host": [
+						"api",
+						"stripe",
+						"com"
+					],
+					"path": [
+						"v1",
+						"promotion_codes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
